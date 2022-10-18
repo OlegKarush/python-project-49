@@ -1,5 +1,5 @@
 
-install: # выполняет установку poetry
+install: # инициализировать виртуальное окружение
 	poetry install
 
 brain-games: # запускает 
