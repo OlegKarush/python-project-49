@@ -1,3 +1,6 @@
 
-install: # выполняет poetry install
+install: # выполняет установку poetry
 	poetry install
+
+brain-games: # запускает 
+	poetry run brain-games
