@@ -2,7 +2,7 @@
 install: # инициализировать виртуальное окружение
 	poetry install
 
-brain-games: # запускает 
+brain-games: # запускает brain-games
 	poetry run brain-games
 
 build:
