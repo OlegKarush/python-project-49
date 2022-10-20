@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from cli import welcome_user
 
 def main():
     print("Welcome to the Brain Games!")
@@ -6,5 +7,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-from cli import welcome_user
-print("Hello, " + welcome_user + "!")
+welcome_user()
