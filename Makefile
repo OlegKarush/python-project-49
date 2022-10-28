@@ -5,6 +5,9 @@ install: # инициализировать виртуальное окруже�
 brain-games: # запускает brain-games
 	poetry run brain-games
 
+brain-even: # запускает brain-even
+	poetry run brain-even
+
 build:
 	poetry build
 
