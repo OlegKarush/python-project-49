@@ -14,12 +14,15 @@ def determine_even_number():
         random_number = randint(1, 100)
         print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
-        if random_number % 2 == 0 and answer.lower() == 'yes':
+        if random_number % 2 == 0:
+            if answer.lower() != 'yes':
+                return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
             print('Correct!')
-        elif random_number % 2 != 0 and answer.lower() == 'no':
+        elif random_number % 2 != 0:
+            if answer.lower() != 'no':
+                return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
             print('Correct!')
-        else:
-            return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
+        
         i -= 1
 
     return print(f"Congratulations, {name}!")
