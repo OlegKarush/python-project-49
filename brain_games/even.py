@@ -9,7 +9,7 @@ def determine_even_number():
     i = 3
     name = welcome_user()
     print('Answer "yes" if the number is even, otherwise answer "no".')
-    
+
     while i > 0:
         random_number = randint(1, 100)
         print(f'Question: {random_number}')
@@ -22,7 +22,7 @@ def determine_even_number():
             if answer.lower() != 'no':
                 return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
             print('Correct!')
-        
+
         i -= 1
 
     return print(f"Congratulations, {name}!")
