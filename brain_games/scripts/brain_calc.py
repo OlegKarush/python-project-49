@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.calc import solving_expression
+from brain_games.games.calc import solving_expression
 
 
 def main():

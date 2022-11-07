@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import prompt
-from random import randint
+import random
 from brain_games.cli import welcome_user
 
 
@@ -11,7 +11,7 @@ def determine_even_number():
     print('Answer "yes" if the number is even, otherwise answer "no".')
 
     while i > 0:
-        random_number = randint(1, 100)
+        random_number = random.randint(1, 100)
         print(f'Question: {random_number}')
         answer = prompt.string('Your answer: ')
         if random_number % 2 == 0:
