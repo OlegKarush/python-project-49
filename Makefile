@@ -8,6 +8,9 @@ brain-games: # запускает brain-games
 brain-even: # запускает brain-even
 	poetry run brain-even
 
+brain-calc: # запускает brain-calc
+	poetry run brain-calc
+
 build:
 	poetry build
 

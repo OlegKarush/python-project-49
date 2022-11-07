@@ -17,7 +17,7 @@ def solving_expression():
         print(f'Question: {str(number_1)} {oper} {str(number_2)}')
         answer = prompt.string('Your answer: ')
 
-        if answer.isnumeric():
+        if answer[0] != '-' and answer.isnumeric():
             if oper == "+":
                 result = operator.add(number_1, number_2)
                 if int(answer) != result:
@@ -33,6 +33,11 @@ def solving_expression():
                 if int(answer) != result:
                     return print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.\nLet's try again, {name}!")
                 print("Correct!")
+        elif answer[0] == '-' and answer[1:].isnumeric():
+            result = operator.sub(number_1, number_2)
+            if int(answer) != result:
+                return print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.\nLet's try again, {name}!")
+            print("Correct!")
         else:
             return print(f"'{answer}' is wrong answer ;(. You need to enter the numbers!\nLet's try again, {name}!")
 
