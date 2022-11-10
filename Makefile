@@ -11,6 +11,12 @@ brain-even: # запускает brain-even
 brain-calc: # запускает brain-calc
 	poetry run brain-calc
 
+brain-gcd: # запускает brain-gcd
+	poetry run brain-gcd
+
+brain-progression: # запускает brain_progression
+	poetry run brain-progression
+
 build:
 	poetry build
 
