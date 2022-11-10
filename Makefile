@@ -17,6 +17,9 @@ brain-gcd: # запускает brain-gcd
 brain-progression: # запускает brain_progression
 	poetry run brain-progression
 
+brain-prime: # запускает brain_progression
+	poetry run brain-prime
+
 build:
 	poetry build
 
