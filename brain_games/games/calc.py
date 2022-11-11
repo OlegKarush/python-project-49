@@ -24,44 +24,20 @@ def exercise():
         print(f'Question: {str(number_1)} {oper} {str(number_2)}')
         answer = prompt.string('Your answer: ')
 
-        # в зависимости от оператора - мат.операция и сравниваются отв
-        if answer[0] != '-' and answer.isnumeric():
-            if oper == "+":
-                result = operator.add(number_1, number_2)
-                if int(answer) != result:
-                    return print(
-                        f"'{answer}' is wrong answer ;(. "
-                        f"Correct answer was '{result}'."
-                        f"\nLet's try again, {name}!")
-                print("Correct!")
-            elif oper == "-":
-                result = operator.sub(number_1, number_2)
-                if int(answer) != result:
-                    return print(
-                        f"'{answer}' is wrong answer ;(. "
-                        f"Correct answer was '{result}'."
-                        f"\nLet's try again, {name}!")
-                print("Correct!")
-            elif oper == "*":
-                result = operator.mul(number_1, number_2)
-                if int(answer) != result:
-                    return print(
-                        f"'{answer}' is wrong answer ;(. "
-                        f"Correct answer was '{result}'."
-                        f"\nLet's try again, {name}!")
-                print("Correct!")
-        # проверям на: наличие знака "-", циферность
-        elif answer[0] == '-' and answer[1:].isnumeric():
+        # в зависимости от оператора производится мат.операция
+        if oper == "+":
+            result = operator.add(number_1, number_2)
+        elif oper == "-":
             result = operator.sub(number_1, number_2)
-            if int(answer) != result:
-                return print(
-                    f"'{answer}' is wrong answer ;(. "
-                    f"Correct answer was '{result}'."
-                    f"\nLet's try again, {name}!")
+        elif oper == "*":
+            result = operator.mul(number_1, number_2)
+        # сравниваются ответы
+        if int(answer) == result:
             print("Correct!")
         else:
             return print(
-                f"'{answer}' is wrong answer ;(. You need to enter the numbers!"
+                f"'{answer}' is wrong answer ;(. "
+                f"Correct answer was '{result}'."
                 f"\nLet's try again, {name}!")
 
         i -= 1
