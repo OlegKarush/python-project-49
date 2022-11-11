@@ -30,7 +30,9 @@ def is_prime():
         else:
             result = 'no'
         if answer.lower() != result:
-            return print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.\nLet's try again, {name}!")
+            return print(
+                f"'{answer}' is wrong answer ;(. Correct answer was '{result}'."
+                f"\nLet's try again, {name}!")
         print('Correct!')
 
         i -= 1

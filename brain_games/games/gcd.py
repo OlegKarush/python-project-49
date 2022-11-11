@@ -25,10 +25,15 @@ def find_divisor():
         # ответ пользователя проверяется на циферность, сравниваются ответы
         if answer.isnumeric():
             if int(answer) != result:
-                return print(f"'{answer}' is wrong answer ;(. Correct answer was '{result}'.\nLet's try again, {name}!")
+                return print(
+                    f"'{answer}' is wrong answer ;(. "
+                    f"Correct answer was '{result}'."
+                    f"\nLet's try again, {name}!")
             print("Correct!")
         else:
-            return print(f"'{answer}' is wrong answer ;(. You need to enter the numbers!\nLet's try again, {name}!")
+            return print(
+                f"'{answer}' is wrong answer ;(. You need to enter the numbers!"
+                f"\nLet's try again, {name}!")
 
         i -= 1
 

@@ -20,11 +20,15 @@ def determine_even_number():
         # Получаем правильный ответ, сравниваем ответы
         if random_number % 2 == 0:
             if answer.lower() != 'yes':
-                return print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
+                return print(
+                    f"'{answer}' is wrong answer ;(. Correct answer was 'yes'."
+                    f"\nLet's try again, {name}!")
             print('Correct!')
         elif random_number % 2 != 0:
             if answer.lower() != 'no':
-                return print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
+                return print(
+                    f"'{answer}' is wrong answer ;(. Correct answer was 'no'."
+                    f"\nLet's try again, {name}!")
             print('Correct!')
 
         i -= 1

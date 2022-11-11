@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-from brain_games.games.calc import solving_expression
+from brain_games.games.calc import exercise
 
 
 def main():
     print('Welcome to the Brain Games!')
-    solving_expression()
+    exercise()
 
 
 if __name__ == '__main__':
