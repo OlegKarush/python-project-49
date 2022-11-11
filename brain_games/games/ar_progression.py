@@ -16,7 +16,7 @@ def find_number():
         number_elem = random.randint(5, 10)
         index_num = random.randint(0, number_elem - 1)
         start_num = random.randint(0, 100)
-        stop_num = random.randint(210, 10000000)
+        stop_num = random.randint(1101, 10000000)
         step_num = random.randint(1, 100)
         # создается список элементов прогрессии
         list_progress = list(range(start_num, stop_num, step_num)[:number_elem])
