@@ -14,8 +14,8 @@ def find_number():
     num = start_progression
     list_progress = []
     while i <= number_elements:
-        num = num + step_progression
         list_progress.append(num)
+        num = num + step_progression
         i += 1
 
     right_answer = list_progress[index_hidden_number]
