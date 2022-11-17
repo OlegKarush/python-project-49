@@ -2,7 +2,7 @@
 
 import random
 from brain_games.cli import beginning_range, stop_range, min_elem, max_elem
-from brain_games.cli import first_index, first_num_step , second_num_step
+from brain_games.cli import first_index, first_num_step, second_num_step
 
 
 def find_number():
