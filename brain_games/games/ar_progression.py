@@ -2,14 +2,14 @@
 
 import random
 from brain_games.cli import beginning_range, stop_range, min_elem, max_elem
-from brain_games.cli import first_index
+from brain_games.cli import first_index, first_num_step , second_num_step
 
 
 def find_number():
     number_elements = random.randint(min_elem, max_elem)
     index_hidden_number = random.randint(first_index, number_elements - 1)
     start_progression = random.randint(beginning_range, stop_range)
-    step_progression = random.randint(beginning_range, stop_range)
+    step_progression = random.randint(first_num_step, second_num_step)
     i = 1
     num = start_progression
     list_progress = []
