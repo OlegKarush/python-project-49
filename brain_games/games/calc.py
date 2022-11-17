@@ -3,43 +3,24 @@
 import operator
 import random
 
-import prompt
-
-from brain_games.cli import welcome_user
+from brain_games.cli import beginning_range, stop_range
 
 
-def exercise():
-    i = 3
-    name = welcome_user()
-    print('What is the result of the expression?')
+def get_math():
+    # определяются рандомные числа
+    first_number = random.randint(beginning_range, stop_range)
+    second_number = random.randint(beginning_range, stop_range)
+    #  определяются рандомные опеаторы
+    oper = random.choice(["+", "-", "*"])
+    # Задается вопрос, ввод ответа
+    print(f'Question: {str(first_number)} {oper} {str(second_number)}')
 
-    # цикл ограничивает количество вопросов = 3
-    while i > 0:
-        # определяются рандомные числа
-        number_1 = random.randint(1, 100)
-        number_2 = random.randint(1, 100)
-        #  определяются рандомные опеаторы
-        oper = random.choice(["+", "-", "*"])
-        # Задается вопрос, ввод ответа
-        print(f'Question: {str(number_1)} {oper} {str(number_2)}')
-        answer = prompt.string('Your answer: ')
+    # в зависимости от оператора получаем правильный ответ
+    if oper == "+":
+        right_answer = operator.add(first_number, second_number)
+    elif oper == "-":
+        right_answer = operator.sub(first_number, second_number)
+    elif oper == "*":
+        right_answer = operator.mul(first_number, second_number)
 
-        # в зависимости от оператора производится мат.операция
-        if oper == "+":
-            result = operator.add(number_1, number_2)
-        elif oper == "-":
-            result = operator.sub(number_1, number_2)
-        elif oper == "*":
-            result = operator.mul(number_1, number_2)
-        # сравниваются ответы
-        if int(answer) == result:
-            print("Correct!")
-        else:
-            return print(
-                f"'{answer}' is wrong answer ;(. "
-                f"Correct answer was '{result}'."
-                f"\nLet's try again, {name}!")
-
-        i -= 1
-
-    return print(f"Congratulations, {name}!")
+    return str(right_answer)

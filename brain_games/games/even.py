@@ -1,36 +1,16 @@
 #!/usr/bin/env python3
 
-import prompt
 import random
-from brain_games.cli import welcome_user
+from brain_games.cli import beginning_range, stop_range
 
 
-def determine_even_number():
-    i = 3
-    name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+def specify_even():
+    random_number = random.randint(beginning_range, stop_range)
+    print(f'Question: {random_number}')
 
-    # цикл ограничивает количество вопросов = 3
-    while i > 0:
-        # определяются рандомные числа
-        random_number = random.randint(1, 100)
-        # Задается вопрос, ввод ответа
-        print(f'Question: {random_number}')
-        answer = prompt.string('Your answer: ')
-        # Получаем правильный ответ, сравниваем ответы
-        if random_number % 2 == 0:
-            if answer.lower() != 'yes':
-                return print(
-                    f"'{answer}' is wrong answer ;(. Correct answer was 'yes'."
-                    f"\nLet's try again, {name}!")
-            print('Correct!')
-        elif random_number % 2 != 0:
-            if answer.lower() != 'no':
-                return print(
-                    f"'{answer}' is wrong answer ;(. Correct answer was 'no'."
-                    f"\nLet's try again, {name}!")
-            print('Correct!')
+    if random_number % 2 == 0:
+        right_answer = 'yes'
+    elif random_number % 2 != 0:
+        right_answer = 'no'
 
-        i -= 1
-
-    return print(f"Congratulations, {name}!")
+    return right_answer

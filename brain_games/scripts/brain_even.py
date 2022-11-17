@@ -1,11 +1,25 @@
 #!/usr/bin/env python3
 
-from brain_games.games.even import determine_even_number
+from brain_games.games.even import specify_even
+from brain_games.cli import welcome_user, question_for_user
+from brain_games.cli import comparison_responses, number_of_rounds
 
 
 def main():
     print('Welcome to the Brain Games!')
-    determine_even_number()
+    name = welcome_user()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
+    i = 1
+
+    while i <= number_of_rounds:
+        right_answer = specify_even()
+        answer_user = question_for_user()
+        if comparison_responses(answer_user, right_answer, name) is False:
+            break
+        i += 1
+
+        if i >= number_of_rounds + 1:
+            return print(f"Congratulations, {name}!")
 
 
 if __name__ == '__main__':

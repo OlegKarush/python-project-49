@@ -1,40 +1,26 @@
 #!/usr/bin/env python3
 
-import prompt
 import random
-from brain_games.cli import welcome_user
+from brain_games.cli import beginning_range, stop_range
 
 
 def is_prime():
-    i = 3
-    name = welcome_user()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
+    # определяется рандомное число
+    random_number = random.randint(beginning_range, stop_range)
+    number_divisors = 0
+    # Задается вопрос
+    print(f'Question: {random_number}')
 
-    # цикл ограничивает количество вопросов = 3
-    while i > 0:
-        # определяется рандомное число
-        random_number = random.randint(1, 100)
-        number_divisors = 0
-        # Задается вопрос, ввод ответа
-        print(f'Question: {random_number}')
-        answer = prompt.string('Your answer: ')
-        # Получаем правильный ответ, сравниваем ответы
-        items = list(range(1, random_number + 1))
-        for item in items:
-            if (random_number % item) != 0:
-                number_divisors += 0
-            else:
-                number_divisors += 1
-        if number_divisors == 2:
-            result = 'yes'
+    # Получаем правильный ответ
+    items = list(range(beginning_range, random_number + 1))
+    for item in items:
+        if (random_number % item) != 0:
+            number_divisors += 0
         else:
-            result = 'no'
-        if answer.lower() != result:
-            return print(
-                f"'{answer}' is wrong answer ;(. Correct answer was '{result}'."
-                f"\nLet's try again, {name}!")
-        print('Correct!')
+            number_divisors += 1
+    if number_divisors == 2:
+        right_answer = 'yes'
+    else:
+        right_answer = 'no'
 
-        i -= 1
-
-    return print(f"Congratulations, {name}!")
+    return right_answer
