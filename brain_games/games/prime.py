@@ -31,9 +31,9 @@ def is_prime():
     # определяется рандомное число
     random_number = random.randint(start_range, stop_range)
     number_divisors = 0
-    # Задается вопрос
+    # создаем вопрос для печати
     question = f'{random_number}'
-    # Получаем правильный ответ
+    # определяем числа для сравнения
     items = list(range(start_range, random_number + 1))
     for item in items:
         if (random_number % item) != 0:

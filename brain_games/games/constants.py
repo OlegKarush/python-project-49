@@ -1,4 +1,5 @@
 
+# констаны для игры
 start_range = 1
 stop_range = 100
 num_of_rounds = 3

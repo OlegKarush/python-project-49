@@ -29,6 +29,7 @@ def game():
 
 
 def find_number():
+    # определяем рандомные числа
     number_elements = random.randint(min_elem, max_elem)
     index_hidden_number = random.randint(first_index, number_elements - 1)
     start_progression = random.randint(start_range, stop_range)
@@ -37,18 +38,19 @@ def find_number():
     num = start_progression
     list_progress = []
 
+    # создаем список
     while i <= number_elements:
         list_progress.append(num)
         num = num + step_progression
         i += 1
 
+    # заменяем один рандомный элемент на ".."
     right_answer = list_progress[index_hidden_number]
     list_progress[index_hidden_number] = ('..')
-    # печать вопроса + список элементов прогрессии
-
+    # создаем список элеменов для печати
     list_2 = ""
     for num in list_progress:
-        list_2 = list_2 + " " + str(num)
+        list_2 = list_2 + str(num) + " "
     question = list_2
 
     return right_answer, question
