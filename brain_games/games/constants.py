@@ -1,10 +1,10 @@
 
 # констаны для игры
-start_range = 1
-stop_range = 100
-num_of_rounds = 3
-min_elem = 5
-max_elem = 10
-first_index = 0
-first_num_step = -100
-second_num_step = 100
+START_RANGE = 1
+STOP_RANGE = 100
+NUM_OF_ROUNDS = 3
+MIN_ELEM = 5
+MAX_ELEM = 10
+FIRST_INDEX = 0
+FIRST_NUM_STEP = -100
+SECOND_NUM_STEP = 100
