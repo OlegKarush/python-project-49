@@ -5,6 +5,7 @@ from brain_games.games.constants import num_of_rounds, start_range, stop_range
 from brain_games.games.functions import welcome_user, question_for_user
 from brain_games.games.functions import comparison_responses, answer_fo_user
 
+
 # описание игры
 def desc_game():
     print('Answer "yes" if the number is even, otherwise answer "no".')

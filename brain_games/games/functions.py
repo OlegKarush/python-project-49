@@ -1,9 +1,11 @@
 
 import prompt
 
+
 # приветствуем игрока
 def greeting():
     print('Welcome to the Brain Games!')
+
 
 # запрашиваем имя
 def welcome_user():
@@ -11,14 +13,17 @@ def welcome_user():
     print(f"Hello, {get_name.capitalize()}!")
     return get_name.capitalize()
 
+
 # задаем вопрос
 def question_for_user(question):
     print(f'Question: {question}')
+
 
 # предлагаем ввести ответ
 def answer_fo_user():
     answer = prompt.string('Your answer: ')
     return answer
+
 
 # сравниваем правильный ответ и ответ игрока
 def comparison_responses(answer, right_answer, name):
