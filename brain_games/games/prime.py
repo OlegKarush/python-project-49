@@ -1,33 +1,14 @@
 
 import random
 
-from brain_games.games.constants import NUM_OF_ROUNDS, START_RANGE, STOP_RANGE
-from brain_games.games.functions import welcome_user, question_for_user
-from brain_games.games.functions import comparison_responses, answer_fo_user
+from brain_games.games.constants import START_RANGE, STOP_RANGE
 
 
 def desc_game():
     print('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
-def game():
-    name = welcome_user()
-    desc_game()
-    i = 1
-
-    while i <= NUM_OF_ROUNDS:
-        right_answer, question = is_prime()
-        question_for_user(question)
-        answer = answer_fo_user()
-        if comparison_responses(answer, right_answer, name) is False:
-            break
-        i += 1
-
-        if i >= NUM_OF_ROUNDS + 1:
-            return print(f"Congratulations, {name}!")
-
-
-def is_prime():
+def get_question_answer():
     # определяется рандомное число
     random_number = random.randint(START_RANGE, STOP_RANGE)
     number_divisors = 0

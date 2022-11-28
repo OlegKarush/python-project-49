@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 
-from brain_games.games.functions import greeting
-from brain_games.games.calc import game
+from brain_games.games.functions import greeting, game
+from brain_games.games.calc import get_question_answer, desc_game
 
 
 def main():
     greeting()
-    game()
+    game(desc_game, get_question_answer)
 
 
 if __name__ == '__main__':

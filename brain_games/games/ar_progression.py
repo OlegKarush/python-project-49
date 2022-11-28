@@ -1,34 +1,16 @@
 
 import random
 
-from brain_games.games.constants import NUM_OF_ROUNDS, START_RANGE, STOP_RANGE
+from brain_games.games.constants import START_RANGE, STOP_RANGE
 from brain_games.games.constants import MIN_ELEM, MAX_ELEM, FIRST_INDEX
 from brain_games.games.constants import FIRST_NUM_STEP, SECOND_NUM_STEP
-from brain_games.games.functions import welcome_user, question_for_user
-from brain_games.games.functions import comparison_responses, answer_fo_user
 
 
 def desc_game():
     print('What number is missing in the progression?')
 
 
-def game():
-    name = welcome_user()
-    desc_game()
-    i = 1
-    while i <= NUM_OF_ROUNDS:
-        right_answer, question = find_number()
-        question_for_user(question)
-        answer = answer_fo_user()
-        if comparison_responses(answer, right_answer, name) is False:
-            break
-        i += 1
-
-        if i >= NUM_OF_ROUNDS + 1:
-            return print(f"Congratulations, {name}!")
-
-
-def find_number():
+def get_question_answer():
     # определяем рандомные числа
     number_elements = random.randint(MIN_ELEM, MAX_ELEM)
     index_hidden_number = random.randint(FIRST_INDEX, number_elements - 1)
