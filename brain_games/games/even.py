@@ -1,12 +1,14 @@
 
 import random
 
-from brain_games.games.constants import START_RANGE, STOP_RANGE
+# констаны для игры
+START_RANGE = 1
+STOP_RANGE = 100
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-# описание игры
-def desc_game():
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+def is_even(number):
+    return number % 2 == 0
 
 
 def get_question_answer():
@@ -15,7 +17,7 @@ def get_question_answer():
     question = f'{random_number}'
 
     # определяем четность числа
-    if random_number % 2 == 0:
+    if is_even(random_number):
         right_answer = 'yes'
     else:
         right_answer = 'no'

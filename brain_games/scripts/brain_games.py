@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from brain_games.games.functions import greeting, welcome_user
+from brain_games.engine import greeting, welcome_user
 
 
 def main():

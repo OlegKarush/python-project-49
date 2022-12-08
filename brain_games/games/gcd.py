@@ -2,11 +2,10 @@
 import math
 import random
 
-from brain_games.games.constants import START_RANGE, STOP_RANGE
-
-
-def desc_game():
-    print('Find the greatest common divisor of given numbers.')
+# констаны для игры
+START_RANGE = 1
+STOP_RANGE = 100
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def get_question_answer():

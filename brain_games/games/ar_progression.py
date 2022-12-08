@@ -1,13 +1,15 @@
 
 import random
 
-from brain_games.games.constants import START_RANGE, STOP_RANGE
-from brain_games.games.constants import MIN_ELEM, MAX_ELEM, FIRST_INDEX
-from brain_games.games.constants import FIRST_NUM_STEP, SECOND_NUM_STEP
-
-
-def desc_game():
-    print('What number is missing in the progression?')
+# констаны для игры
+START_RANGE = 1
+STOP_RANGE = 100
+MIN_ELEM = 5
+MAX_ELEM = 10
+FIRST_INDEX = 0
+FIRST_NUM_STEP = -100
+SECOND_NUM_STEP = 100
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_question_answer():
@@ -30,9 +32,9 @@ def get_question_answer():
     right_answer = list_progress[index_hidden_number]
     list_progress[index_hidden_number] = ('..')
     # создаем список элеменов для печати
-    list_2 = ""
+    list_2 = ''
     for num in list_progress:
-        list_2 = list_2 + str(num) + " "
+        list_2 = list_2 + str(num) + ' '
     question = list_2
 
     return right_answer, question
