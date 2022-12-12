@@ -1,7 +1,7 @@
 
 import random
 
-# констаны для игры
+# constants for the game
 START_RANGE = 1
 STOP_RANGE = 100
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
@@ -12,14 +12,15 @@ def is_even(number):
 
 
 def get_question_answer():
-    # выбираем рандомное число
+    # define random number
     random_number = random.randint(START_RANGE, STOP_RANGE)
+    # ask a question
     question = f'{random_number}'
-
-    # определяем четность числа
+    # check the number is even
+    # getting the right answer
     if is_even(random_number):
         right_answer = 'yes'
     else:
         right_answer = 'no'
 
-    return right_answer, question
+    return str(right_answer), question

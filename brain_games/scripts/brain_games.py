@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 
-from brain_games.engine import greeting, welcome_user
+import prompt
+
+from brain_games.engine import GREETING
 
 
 def main():
-    greeting()
-    welcome_user()
+    print(GREETING)
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name.capitalize()}!')
 
 
 if __name__ == '__main__':

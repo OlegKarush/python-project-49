@@ -1,7 +1,7 @@
 
 import random
 
-# констаны для игры
+# constants for the game
 START_RANGE = 1
 STOP_RANGE = 100
 MIN_ELEM = 5
@@ -13,7 +13,7 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_question_answer():
-    # определяем рандомные числа
+    # define random numbers
     number_elements = random.randint(MIN_ELEM, MAX_ELEM)
     index_hidden_number = random.randint(FIRST_INDEX, number_elements - 1)
     start_progression = random.randint(START_RANGE, STOP_RANGE)
@@ -22,19 +22,17 @@ def get_question_answer():
     num = start_progression
     list_progress = []
 
-    # создаем список
+    # creating a list
     while i <= number_elements:
         list_progress.append(num)
         num = num + step_progression
         i += 1
 
-    # заменяем один рандомный элемент на ".."
+    # getting the right answer
     right_answer = list_progress[index_hidden_number]
+    # replacing one random element with ".."
     list_progress[index_hidden_number] = ('..')
-    # создаем список элеменов для печати
-    list_2 = ''
-    for num in list_progress:
-        list_2 = list_2 + str(num) + ' '
-    question = list_2
+    # ask a question
+    question = (" ".join(map(str, list_progress)))
 
-    return right_answer, question
+    return str(right_answer), question
