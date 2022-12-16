@@ -1,6 +1,4 @@
-
 import random
-
 # constants for the game
 START_RANGE = 1
 STOP_RANGE = 100

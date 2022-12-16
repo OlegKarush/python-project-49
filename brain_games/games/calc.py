@@ -1,7 +1,5 @@
-
 import operator
 import random
-
 # constants for the game
 START_RANGE = 1
 STOP_RANGE = 100
@@ -15,6 +13,8 @@ def get_result(first_number, second_number, oper):
         result_of_calc = operator.sub(first_number, second_number)
     elif oper == '*':
         result_of_calc = operator.mul(first_number, second_number)
+    else:
+        return None
 
     return result_of_calc
 

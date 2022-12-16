@@ -1,14 +1,11 @@
-
 import prompt
-
 # constants for the game engine
 NUM_OF_ROUNDS = 3
-GREETING = 'Welcome to the Brain Games!'
 
 
 # game engine
 def run_game(game):
-    print(GREETING)
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print(f'Hello, {name.capitalize()}!')
     print(game.DESCRIPTION)
@@ -20,11 +17,11 @@ def run_game(game):
         if answer.lower() == right_answer:
             print('Correct!')
         else:
-            return print(
+            print(
                 f'\'{answer}\' is wrong answer ;(. '
                 f'Correct answer was \'{right_answer}\'.'
                 f'\nLet\'s try again, {name.capitalize()}!')
+            return False
         i += 1
 
-        if i > NUM_OF_ROUNDS:
-            return print(f"Congratulations, {name.capitalize()}!")
+    print(f"Congratulations, {name.capitalize()}!")
