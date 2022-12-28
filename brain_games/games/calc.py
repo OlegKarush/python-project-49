@@ -14,7 +14,7 @@ def get_result(first_number, second_number, oper):
     elif oper == '*':
         result_of_calc = operator.mul(first_number, second_number)
     else:
-        return None
+        return
 
     return result_of_calc
 
